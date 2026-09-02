@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DS WebPulse | Next-Gen Web Development & AI Video Agency</title>
+  <meta name="description" content="DS WebPulse - Bespoke Web Development, AI Video Production & Digital Solutions." />
+  
+  <!-- Tailwind CSS & Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+          colors: {
+            brand: {
+              bg: '#050811',
+              surface: '#0d1322',
+              card: '#121a30',
+              blue: '#0052FF',
+              cyan: '#00D2FF',
+              accent: '#38BDF8'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { background-color: #050811; color: #f1f5f9; }
+    .glass-box {
+      background: rgba(18, 26, 48, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-featured {
+      background: rgba(18, 26, 48, 0.9);
+      border: 1px solid #00D2FF;
+      box-shadow: 0 0 30px rgba(0, 210, 255, 0.18);
+    }
+    .text-glow {
+      background: linear-gradient(135deg, #00D2FF 0%, #0052FF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-brand-blue selection:text-white">
+
+  <!-- Floating Navigation -->
+  <header class="fixed top-0 w-full z-40 bg-brand-bg/85 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-5 h-20 flex items-center justify-between">
+      
+      <!-- Added Logo 12345678.png -->
+      <a href="#" class="flex items-center gap-3">
+        <img src="12345678.png" alt="DS WebPulse Logo" class="h-11 sm:h-12 w-auto object-contain rounded-md" />
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-7 text-xs font-semibold text-slate-300">
+        <a href="#web-packages" class="hover:text-brand-cyan transition">Web Packages</a>
+        <a href="#ai-video" class="hover:text-brand-cyan transition">AI Video Bundles</a>
+        <a href="#process-terms" class="hover:text-brand-cyan transition">Commercial Terms</a>
+        <button onclick="toggleModal('adminModal')" class="text-slate-400 hover:text-white transition flex items-center gap-1.5">
+          <span>⚙️</span> Admin Demo
+        </button>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="tel:8698189788" class="hidden sm:inline-flex items-center gap-1.5 text-xs font-bold text-slate-200 hover:text-brand-cyan transition px-3 py-2">
+          📞 8698189788
+        </a>
+        <button onclick="toggleModal('authModal')" class="px-4 py-2 rounded-lg glass-box text-xs font-semibold text-white hover:bg-white/10 transition">
+          Client Login
+        </button>
+        <a href="https://wa.me/918698189788?text=Hi%20DS%20WebPulse,%20I%20want%20to%20discuss%20a%20project" target="_blank" class="px-4 py-2 rounded-lg bg-gradient-to-r from-brand-blue to-brand-cyan text-white text-xs font-bold shadow-md shadow-brand-blue/30 hover:brightness-110 transition">
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-36 pb-20 px-6 max-w-5xl mx-auto text-center">
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-brand-cyan/20 text-brand-cyan text-xs font-semibold mb-6">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+      Full-Service Web & AI Video Agency
+    </div>
+    <h1 class="text-4xl sm:text-6xl font-black text-white tracking-tight leading-[1.15] mb-6">
+      Empowering Your Digital Pulse with <br/>
+      <span class="text-glow">Expert Web & AI Video Services</span>
+    </h1>
+    <p class="text-slate-400 text-sm sm:text-base max-w-2xl mx-auto mb-10 leading-relaxed">
+      Bespoke responsive websites, high-speed architectures, aur Alex Hormozi style hyper-engaging AI video commercials aapke brand ke liye.
+    </p>
+    <div class="flex flex-wrap items-center justify-center gap-4">
+      <a href="#web-packages" class="px-8 py-3.5 rounded-xl bg-gradient-to-r from-brand-blue to-brand-cyan text-white font-bold text-xs tracking-wide shadow-xl shadow-brand-blue/25 hover:brightness-110 transition">
+        Explore Packages
+      </a>
+      <a href="tel:8698189788" class="px-8 py-3.5 rounded-xl glass-box text-white font-bold text-xs hover:bg-white/5 transition">
+        Direct Call: 8698189788
+      </a>
+    </div>
+  </section>
+
+  <!-- 1. Website Development Packages -->
+  <section id="web-packages" class="py-16 max-w-6xl mx-auto px-6">
+    <div class="text-center mb-12">
+      <div class="text-xs font-extrabold uppercase tracking-widest text-brand-cyan mb-2">Section 1</div>
+      <h2 class="text-3xl sm:text-4xl font-black text-white">Website Development Packages</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 items-stretch">
+      <!-- Basic Website Package -->
+      <div class="glass-box rounded-2xl p-8 flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-start mb-3">
+            <div>
+              <h3 class="text-2xl font-bold text-white">Basic Website Package</h3>
+              <p class="text-xs text-slate-400 mt-1">Best for: Small Businesses, Portfolios, Consultants, Local Stores</p>
+            </div>
+          </div>
+          <div class="text-3xl font-extrabold text-brand-cyan mb-6">
+            ₹9,999 <span class="text-xs font-normal text-slate-400">(One-Time)</span>
+          </div>
+          <div class="h-px bg-white/10 mb-6"></div>
+          <ul class="space-y-3.5 text-xs text-slate-300">
+            <li><strong class="text-white">• Pages:</strong> 4 to 5 Pages (Home, About, Services, Gallery, Contact)</li>
+            <li><strong class="text-white">• Design:</strong> 100% Mobile & Tablet Responsive UI</li>
+            <li><strong class="text-white">• Tech Stack:</strong> WordPress / Modern HTML5, CSS3, JS</li>
+            <li><strong class="text-white">• Features:</strong> Contact Lead Form, WhatsApp Chat Button, Google Map</li>
+            <li><strong class="text-white">• SEO:</strong> Essential On-Page SEO & Fast Loading Speed</li>
+            <li><strong class="text-white">• Timeline:</strong> 5 – 7 Working Days Delivery</li>
+            <li><strong class="text-white">• Support:</strong> 30 Days Free Technical & Bug Fix Support</li>
+          </ul>
+        </div>
+        <div class="mt-8 pt-6 border-t border-white/5 flex gap-3">
+          <button onclick="openPayment('Basic Website Package', '₹9,999')" class="flex-1 py-3 rounded-xl glass-box font-bold text-xs text-white hover:bg-white/10 transition">
+            Order ₹9,999
+          </button>
+          <a href="https://wa.me/918698189788?text=Hello%20DS%20WebPulse,%20I%20want%20the%20Basic%20Website%20Package" target="_blank" class="px-4 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs transition">
+            Chat
+          </a>
+        </div>
+      </div>
+
+      <!-- Advanced / Custom Website Package -->
+      <div class="glass-featured rounded-2xl p-8 flex flex-col justify-between relative">
+        <div class="absolute -top-3 right-8 bg-brand-cyan text-slate-950 text-[10px] font-extrabold uppercase px-3.5 py-1 rounded-full tracking-wider shadow-lg">
+          MOST POPULAR
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold text-white">Advanced / Custom Website</h3>
+          <p class="text-xs text-slate-400 mt-1">Best for: High-Growth Brands, E-Commerce, Portals, Corporate Agencies</p>
+          <div class="text-3xl font-extrabold text-brand-cyan my-4">
+            ₹34,999 – ₹44,999 <span class="text-xs font-normal text-slate-400">(One-Time)</span>
+          </div>
+          <div class="h-px bg-white/15 mb-6"></div>
+          <ul class="space-y-3.5 text-xs text-slate-200">
+            <li><strong class="text-brand-cyan">• Pages:</strong> Up to 10-15 Dynamic Custom Pages or E-Commerce</li>
+            <li><strong class="text-brand-cyan">• Design:</strong> Bespoke UI/UX (Figma to Web), Interactive Micro-animations</li>
+            <li><strong class="text-brand-cyan">• Tech Stack:</strong> Next.js / MERN Stack / Shopify / Custom CMS</li>
+            <li><strong class="text-brand-cyan">• Features:</strong> Payment Gateway Integration, User Auth, Admin Dashboard</li>
+            <li><strong class="text-brand-cyan">• Performance:</strong> 90+ Google PageSpeed Score, SSL & Cloudflare CDN</li>
+            <li><strong class="text-brand-cyan">• Timeline:</strong> 15 – 20 Working Days Delivery</li>
+            <li><strong class="text-brand-cyan">• Support:</strong> 60 Days Priority Maintenance & Training Support</li>
+          </ul>
+        </div>
+        <div class="mt-8 pt-6 border-t border-white/10 flex gap-3">
+          <button onclick="openPayment('Advanced / Custom Website', '₹34,999 - ₹44,999')" class="flex-1 py-3.5 rounded-xl bg-gradient-to-r from-brand-blue to-brand-cyan text-white font-extrabold text-xs shadow-lg hover:brightness-110 transition">
+            Book Advanced Plan
+          </button>
+          <a href="https://wa.me/918698189788?text=Hello%20DS%20WebPulse,%20I%20want%20the%20Advanced%20Custom%20Website%20Package" target="_blank" class="px-4 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs transition">
+            Chat
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. AI Video Creation Packages -->
+  <section id="ai-video" class="py-16 max-w-6xl mx-auto px-6">
+    <div class="text-center mb-10">
+      <div class="text-xs font-extrabold uppercase tracking-widest text-brand-cyan mb-2">Section 2</div>
+      <h2 class="text-3xl sm:text-4xl font-black text-white">AI Video Creation Packages</h2>
+      <p class="text-xs text-slate-400 mt-2 max-w-3xl mx-auto leading-relaxed">
+        Includes Scriptwriting, Ultra-Realistic AI Voiceover (English/Marathi/Hindi), HD Visuals, Alex Hormozi Style Kinetic Captions, Sound Effects & Music.
+      </p>
+    </div>
+
+    <div class="overflow-x-auto rounded-2xl glass-box border border-white/10">
+      <table class="w-full text-left text-xs border-collapse">
+        <thead class="bg-brand-surface/90 text-slate-300 uppercase tracking-wider text-[11px] border-b border-white/10">
+          <tr>
+            <th class="p-4 sm:p-5">Package Name</th>
+            <th class="p-4 sm:p-5">Duration</th>
+            <th class="p-4 sm:p-5">Best Suited For</th>
+            <th class="p-4 sm:p-5 text-right">Bundle Price (5 Videos)</th>
+            <th class="p-4 sm:p-5 text-center">Action</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-white/5 text-slate-300">
+          <tr class="hover:bg-white/5 transition">
+            <td class="p-4 sm:p-5 font-bold text-white">Micro Hook Pack<br><span class="font-normal text-[11px] text-slate-400">5 Video Bundle</span></td>
+            <td class="p-4 sm:p-5">10 Seconds <span class="text-slate-400">per video</span></td>
+            <td class="p-4 sm:p-5 text-slate-400">Viral Instagram Reels hooks, YouTube Shorts teasers, flash sales, WhatsApp status ads</td>
+            <td class="p-4 sm:p-5 text-right font-extrabold text-brand-cyan text-sm">₹4,499<br><span class="font-normal text-[10px] text-slate-400">(₹900 / video)</span></td>
+            <td class="p-4 sm:p-5 text-center">
+              <button onclick="openPayment('Micro Hook Pack (5 Videos)', '₹4,499')" class="px-3 py-1.5 rounded-lg glass-box text-[11px] font-bold text-white hover:border-brand-cyan">Order</button>
+            </td>
+          </tr>
+          <tr class="hover:bg-white/5 transition">
+            <td class="p-4 sm:p-5 font-bold text-white">Growth Ads Pack<br><span class="font-normal text-[11px] text-slate-400">5 Video Bundle</span></td>
+            <td class="p-4 sm:p-5">20 Seconds <span class="text-slate-400">per video</span></td>
+            <td class="p-4 sm:p-5 text-slate-400">Key product feature highlights, service USP showcase, high-conversion lead generation ads</td>
+            <td class="p-4 sm:p-5 text-right font-extrabold text-brand-cyan text-sm">₹7,499<br><span class="font-normal text-[10px] text-slate-400">(₹1,500 / video)</span></td>
+            <td class="p-4 sm:p-5 text-center">
+              <button onclick="openPayment('Growth Ads Pack (5 Videos)', '₹7,499')" class="px-3 py-1.5 rounded-lg glass-box text-[11px] font-bold text-white hover:border-brand-cyan">Order</button>
+            </td>
+          </tr>
+          <tr class="hover:bg-white/5 transition">
+            <td class="p-4 sm:p-5 font-bold text-white">Story Explainer Pack<br><span class="font-normal text-[11px] text-slate-400">5 Video Bundle</span></td>
+            <td class="p-4 sm:p-5">30 Seconds <span class="text-slate-400">per video</span></td>
+            <td class="p-4 sm:p-5 text-slate-400">Problem-solution story ads, brand authority building, comprehensive explainer videos</td>
+            <td class="p-4 sm:p-5 text-right font-extrabold text-brand-cyan text-sm">₹10,999<br><span class="font-normal text-[10px] text-slate-400">(₹2,200 / video)</span></td>
+            <td class="p-4 sm:p-5 text-center">
+              <button onclick="openPayment('Story Explainer Pack (5 Videos)', '₹10,999')" class="px-3 py-1.5 rounded-lg glass-box text-[11px] font-bold text-white hover:border-brand-cyan">Order</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Value Combo Offer -->
+    <div class="mt-8 p-6 rounded-2xl border border-brand-cyan/40 bg-gradient-to-r from-blue-950/40 via-brand-card to-slate-900 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
+      <div>
+        <span class="inline-block px-3 py-1 rounded-md bg-brand-cyan text-slate-950 font-black text-[10px] uppercase tracking-wider mb-2">
+          Exclusive Value Combo Offer
+        </span>
+        <h4 class="text-base font-bold text-white">Basic Website Development + 5 AI Videos (20s Growth Pack)</h4>
+        <p class="text-xs text-slate-300 mt-1">Combined at only <strong class="text-brand-cyan text-sm">₹15,999</strong> (Save ₹1,500 instantly)!</p>
+      </div>
+      <button onclick="openPayment('Value Combo Offer (Website + 5 AI Videos)', '₹15,999')" class="whitespace-nowrap px-6 py-3 rounded-xl bg-brand-cyan text-slate-950 font-extrabold text-xs hover:bg-cyan-300 transition">
+        Claim Combo ₹15,999
+      </button>
+    </div>
+  </section>
+
+  <!-- 3. Process & Commercial Terms -->
+  <section id="process-terms" class="py-16 max-w-6xl mx-auto px-6">
+    <div class="text-center mb-10">
+      <div class="text-xs font-extrabold uppercase tracking-widest text-brand-cyan mb-2">Section 3</div>
+      <h2 class="text-2xl sm:text-3xl font-black text-white">Process & Commercial Terms</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-6">
+      <div class="glass-box rounded-xl p-6">
+        <h3 class="text-sm font-bold text-brand-cyan mb-4 flex items-center gap-2">
+          <span>💳</span> Payment Milestones:
+        </h3>
+        <ul class="space-y-3 text-xs text-slate-300">
+          <li class="flex items-start gap-2">
+            <span class="text-brand-cyan font-bold">•</span>
+            <span><strong>50% upfront deposit</strong> upon project commencement</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-brand-cyan font-bold">•</span>
+            <span><strong>50% balance</strong> upon final review, approval, and deployment</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="glass-box rounded-xl p-6">
+        <h3 class="text-sm font-bold text-brand-cyan mb-4 flex items-center gap-2">
+          <span>🎬</span> Revisions & Formats:
+        </h3>
+        <ul class="space-y-3 text-xs text-slate-300">
+          <li class="flex items-start gap-2">
+            <span class="text-brand-cyan font-bold">•</span>
+            <span><strong>2 complimentary rounds of revision</strong> per AI video</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-brand-cyan font-bold">•</span>
+            <span>Delivered in <strong>9:16 (Vertical Reels/Shorts)</strong> & <strong>16:9 (Landscape HD)</strong></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lead Form -->
+  <section class="py-16 max-w-3xl mx-auto px-6">
+    <div class="glass-box rounded-3xl p-8 sm:p-10 border border-brand-cyan/20">
+      <div class="text-center mb-8">
+        <h3 class="text-2xl font-extrabold text-white mb-2">Start Your Project with DS WebPulse</h3>
+        <p class="text-xs text-slate-400">Fill in details and directly connect on WhatsApp or get a callback.</p>
+      </div>
+      <form onsubmit="handleLeadSubmit(event)" class="space-y-4">
+        <div class="grid sm:grid-cols-2 gap-4">
+          <input id="clientName" type="text" placeholder="Your Name / Business Name" required class="w-full bg-brand-surface border border-white/10 rounded-xl px-4 py-3 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-brand-cyan" />
+          <input id="clientPhone" type="tel" placeholder="Phone Number / WhatsApp" required class="w-full bg-brand-surface border border-white/10 rounded-xl px-4 py-3 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-brand-cyan" />
+        </div>
+        <select id="clientPackage" class="w-full bg-brand-surface border border-white/10 rounded-xl px-4 py-3 text-xs text-slate-300 focus:outline-none focus:border-brand-cyan">
+          <option value="Basic Website (₹9,999)">Basic Website Package (₹9,999)</option>
+          <option value="Advanced Custom Website (₹34,999 - ₹44,999)" selected>Advanced / Custom Website (₹34,999 – ₹44,999)</option>
+          <option value="Value Combo Offer (₹15,999)">Exclusive Value Combo (₹15,999)</option>
+          <option value="Micro Hook AI Pack (₹4,499)">Micro Hook 5 Video Bundle (₹4,499)</option>
+          <option value="Growth Ads AI Pack (₹7,499)">Growth Ads 5 Video Bundle (₹7,499)</option>
+          <option value="Story Explainer AI Pack (₹10,999)">Story Explainer 5 Video Bundle (₹10,999)</option>
+        </select>
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-brand-blue to-brand-cyan text-white font-extrabold text-xs shadow-lg hover:brightness-110 transition">
+          Submit & Chat on WhatsApp
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer with Logo 12345678.png -->
+  <footer class="border-t border-white/10 py-12 bg-brand-surface/40 text-center text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="text-left flex items-center gap-3">
+        <img src="12345678.png" alt="DS WebPulse Logo" class="h-10 w-auto object-contain rounded-md" />
+        <div>
+          <div class="text-sm font-bold text-white">DS WebPulse</div>
+          <p class="text-[11px] text-slate-400">High Speed Web Dev & AI Commercial Videos</p>
+        </div>
+      </div>
+      <div class="text-slate-300 font-semibold">
+        Phone: <a href="tel:8698189788" class="text-brand-cyan hover:underline">8698189788</a>
+      </div>
+      <p>© 2026 DS WebPulse. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Modal 1: Auth -->
+  <div id="authModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="glass-box rounded-2xl w-full max-w-sm p-6 relative border border-brand-cyan/30">
+      <button onclick="toggleModal('authModal')" class="absolute top-4 right-4 text-slate-400 hover:text-white">✕</button>
+      <h3 class="text-lg font-bold text-white mb-1">Client Portal Login</h3>
+      <p class="text-[11px] text-slate-400 mb-6">Login to access project tracking and deliverables.</p>
+      <div class="space-y-3">
+        <input type="email" placeholder="client@company.com" class="w-full bg-brand-surface border border-white/10 rounded-lg px-3 py-2 text-xs text-white focus:border-brand-cyan outline-none" />
+        <input type="password" placeholder="••••••••" class="w-full bg-brand-surface border border-white/10 rounded-lg px-3 py-2 text-xs text-white focus:border-brand-cyan outline-none" />
+        <button onclick="alert('Demo Login Successful! Linked to Supabase / Next.js Auth.'); toggleModal('authModal');" class="w-full py-2.5 rounded-lg bg-brand-blue text-white font-bold text-xs hover:bg-blue-600 transition">
+          Sign In
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Admin Dashboard -->
+  <div id="adminModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="glass-box rounded-2xl w-full max-w-2xl p-6 relative border border-white/20">
+      <button onclick="toggleModal('adminModal')" class="absolute top-4 right-4 text-slate-400 hover:text-white">✕</button>
+      <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-4">
+        <div>
+          <h3 class="text-lg font-bold text-white">DS WebPulse Admin Dashboard</h3>
+          <p class="text-[11px] text-slate-400">Live backend management overview</p>
+        </div>
+        <span class="px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-400 text-[10px] font-bold">System Online</span>
+      </div>
+      <div class="grid grid-cols-3 gap-3 mb-6">
+        <div class="p-3 rounded-lg bg-white/5">
+          <div class="text-[10px] uppercase text-slate-400">Active Leads</div>
+          <div class="text-lg font-bold text-white mt-1">12</div>
+        </div>
+        <div class="p-3 rounded-lg bg-white/5">
+          <div class="text-[10px] uppercase text-slate-400">Projects in Progress</div>
+          <div class="text-lg font-bold text-brand-cyan mt-1">4</div>
+        </div>
+        <div class="p-3 rounded-lg bg-white/5">
+          <div class="text-[10px] uppercase text-slate-400">Avg Speed Score</div>
+          <div class="text-lg font-bold text-emerald-400 mt-1">98/100</div>
+        </div>
+      </div>
+      <p class="text-xs text-slate-400 text-center">Connected with Supabase/MongoDB Database Schema.</p>
+    </div>
+  </div>
+
+  <!-- Modal 3: Payment Trigger -->
+  <div id="paymentModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="glass-box rounded-2xl w-full max-w-md p-6 relative border border-brand-cyan/40">
+      <button onclick="toggleModal('paymentModal')" class="absolute top-4 right-4 text-slate-400 hover:text-white">✕</button>
+      <div class="flex items-center gap-2 mb-4">
+        <span class="text-lg">🔒</span>
+        <h3 class="text-base font-bold text-white">Secure Checkout (50% Milestone)</h3>
+      </div>
+      <div class="p-4 rounded-xl bg-white/5 mb-4">
+        <div class="text-xs text-slate-400">Selected Package:</div>
+        <div id="payPkgName" class="text-sm font-bold text-white mt-0.5">Package</div>
+        <div class="text-xs text-slate-400 mt-2">Total Amount:</div>
+        <div id="payPkgPrice" class="text-lg font-extrabold text-brand-cyan mt-0.5">Price</div>
+      </div>
+      <p class="text-[11px] text-slate-400 mb-4">50% upfront deposit triggers project commencement as per terms.</p>
+      <button onclick="triggerRazorpaySim()" class="w-full py-3 rounded-xl bg-gradient-to-r from-brand-blue to-brand-cyan text-white font-bold text-xs hover:brightness-110 transition">
+        Proceed with Razorpay / UPI
+      </button>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function toggleModal(id) {
+      const el = document.getElementById(id);
+      el.classList.toggle('hidden');
+    }
+
+    function openPayment(name, price) {
+      document.getElementById('payPkgName').innerText = name;
+      document.getElementById('payPkgPrice').innerText = price;
+      toggleModal('paymentModal');
+    }
+
+    function triggerRazorpaySim() {
+      alert('Razorpay/Stripe Gateway Triggered!\nIn live production, your Razorpay Key ID will open the UPI/Card popup directly.');
+      toggleModal('paymentModal');
+    }
+
+    function handleLeadSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('clientName').value;
+      const phone = document.getElementById('clientPhone').value;
+      const pkg = document.getElementById('clientPackage').value;
+      
+      const msg = `Hello DS WebPulse, I want to inquire about a project:%0A%0A• Name: ${encodeURIComponent(name)}%0A• Phone: ${encodeURIComponent(phone)}%0A• Package: ${encodeURIComponent(pkg)}`;
+      window.open(`https://wa.me/918698189788?text=${msg}`, '_blank');
+    }
+  </script>
+
+</body>
+</html>
