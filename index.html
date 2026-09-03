@@ -1249,7 +1249,59 @@
 
     handleSilentSubmit('onPageForm', 'onPageSubmitBtn', 'onPageSuccess');
     handleSilentSubmit('modalForm', 'modalSubmitBtn', 'modalSuccess');
-  </script>
+// बटन पर सिर्फ 'Sent' दिखाने वाला तरीका
+async function handleSilentSubmit(formId, btnId) {
+  const form = document.getElementById(formId);
+  const btn = document.getElementById(btnId);
 
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    btn.disabled = true;
+    btn.innerHTML = '⏳ Sending...';
+
+    const formData = new FormData(form);
+    const objectData = {};
+    formData.forEach((value, key) => objectData[key] = value);
+    objectData['_subject'] = '🚀 New Client Inquiry on DS WebPulse!';
+
+    try {
+      const res = await fetch('https://formsubmit.co/ajax/dswebpulse@gmail.com', {
+        method: 'POST',
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(objectData)
+      });
+
+      if (res.ok) {
+        // कोई नया पेज नहीं, कोई नया बॉक्स नहीं - सिर्फ बटन पर 'Sent'
+        btn.innerHTML = '✓ Sent Successfully!';
+        btn.style.background = '#10b981'; // हरा रंग
+        form.reset();
+        
+        setTimeout(() => {
+          btn.disabled = false;
+          btn.innerHTML = '📨 Submit Project Details';
+          btn.style.background = '';
+        }, 4000);
+      } else {
+        alert('Could not send. Please try again.');
+        btn.disabled = false;
+        btn.innerHTML = 'Try Again';
+      }
+    } catch (err) {
+      alert('Network issue.');
+      btn.disabled = false;
+      btn.innerHTML = 'Try Again';
+    }
+  });
+}
+
+handleSilentSubmit('onPageForm', 'onPageSubmitBtn');
+handleSilentSubmit('modalForm', 'modalSubmitBtn');
+    /script>
+      
 </body>
 </html>
