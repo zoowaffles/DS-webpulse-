@@ -45,7 +45,6 @@
       background-attachment: fixed;
     }
 
-    /* Top Announcement Bar */
     .top-banner {
       background: linear-gradient(90deg, #0284c7, #2563eb);
       color: #ffffff;
@@ -56,7 +55,6 @@
       letter-spacing: 0.5px;
     }
 
-    /* Navbar */
     nav {
       display: flex;
       justify-content: space-between;
@@ -133,6 +131,12 @@
       box-shadow: 0 6px 24px rgba(56, 189, 248, 0.35);
     }
 
+    .btn:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+      transform: none;
+    }
+
     .btn-outline {
       background: transparent;
       border: 1px solid var(--border);
@@ -146,7 +150,6 @@
       color: var(--accent);
     }
 
-    /* Hero Section (Matching WebPulse AI) */
     .hero {
       text-align: center;
       padding: 6.5rem 8% 4.5rem;
@@ -227,7 +230,6 @@
       flex-wrap: wrap;
     }
 
-    /* Stats Strip */
     .stats-strip {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -291,7 +293,6 @@
       font-size: 1.05rem;
     }
 
-    /* Services Grid (WebPulse AI 6 Capabilities) */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -354,7 +355,6 @@
       color: #cbd5e1;
     }
 
-    /* Delivery Process (WebPulse AI 7-Step Delivery) */
     .process-timeline {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -396,7 +396,6 @@
       color: #38bdf8;
     }
 
-    /* Project Showcase Cards with Live Video */
     .project-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -467,7 +466,6 @@
       flex: 1;
     }
 
-    /* Pricing Section */
     .pricing-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -540,7 +538,6 @@
       font-weight: 800;
     }
 
-    /* Modal Styling */
     .modal-overlay {
       position: fixed;
       top: 0;
@@ -630,51 +627,6 @@
     .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
       border-color: var(--accent);
       box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
-    }
-
-    .success-box {
-      display: none;
-      background: rgba(16, 185, 129, 0.1);
-      border: 1px solid #10b981;
-      padding: 2rem;
-      border-radius: 12px;
-      text-align: center;
-      margin-top: 1rem;
-    }
-
-    .success-box h3 {
-      color: #10b981;
-      font-size: 1.4rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .success-box p {
-      color: #e2e8f0;
-      font-size: 0.95rem;
-    }
-
-    /* Floating WhatsApp Button */
-    .floating-wa {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background: #25d366;
-      color: #fff;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
-      z-index: 1000;
-      text-decoration: none;
-      font-size: 28px;
-      transition: 0.3s;
-    }
-
-    .floating-wa:hover {
-      transform: scale(1.1);
     }
 
     footer {
@@ -806,7 +758,6 @@
     </div>
 
     <div class="services-grid">
-      
       <div class="service-card">
         <div class="service-icon">💻</div>
         <h3>Web Application & SaaS Development</h3>
@@ -872,7 +823,6 @@
           <span class="service-tag">SSL Encryption</span>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -922,7 +872,6 @@
     </div>
 
     <div class="project-grid">
-
       <div class="project-card">
         <div class="project-media">
           <span class="video-badge">▶ 15s Cinematic AI Commercial</span>
@@ -964,7 +913,6 @@
           <button class="btn btn-outline" style="width:100%;" onclick="openProjectModal('CloudPulse AI Analytics (Australia)', 'A dark-mode enterprise software landing page designed for B2B buyer psychology. Combined with a 30-second 3D holographic AI commercial with professional synthetic voiceover explaining the product in seconds.', 'project3.mp4')">📖 View Architecture Details</button>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -976,7 +924,6 @@
     </div>
 
     <div class="pricing-grid">
-
       <div class="price-card">
         <h3>Conversion Landing Page</h3>
         <p style="color:var(--text-muted); font-size:0.9rem;">Clean single-page build for quick lead generation.</p>
@@ -1017,7 +964,6 @@
         </ul>
         <button class="btn btn-outline" style="width:100%;" onclick="openContactModal('Custom Enterprise ($699+)')">Get Custom Quote</button>
       </div>
-
     </div>
   </section>
 
@@ -1056,11 +1002,6 @@
         </div>
         <button type="submit" id="onPageSubmitBtn" class="btn" style="width: 100%; font-size: 1.05rem; padding: 1rem;">📨 Submit Project Details</button>
       </form>
-
-      <div id="onPageSuccess" class="success-box">
-        <h3>🎉 Inquiry Received!</h3>
-        <p>Thank you for reaching out to DS WebPulse. We have received your project scope and our engineering team will respond within 2 to 4 hours.</p>
-      </div>
     </div>
   </section>
 
@@ -1093,12 +1034,6 @@
         </div>
         <button type="submit" id="modalSubmitBtn" class="btn" style="width: 100%; padding: 0.9rem;">Send Inquiry Now</button>
       </form>
-
-      <div id="modalSuccess" class="success-box">
-        <h3>🎉 Inquiry Dispatched!</h3>
-        <p>Your inquiry has been sent to our inbox. We will reach out to you within 2 to 4 hours.</p>
-        <button class="btn btn-outline" style="margin-top: 1rem;" onclick="closeContactModal()">Close (✕)</button>
-      </div>
     </div>
   </div>
 
@@ -1121,8 +1056,6 @@
       </div>
     </div>
   </div>
-
-  <a href="https://wa.me/918698189788?text=Hi%20DS%20WebPulse%2C%20I%20have%20an%20inquiry%20regarding%20web%20development%20and%20AI%20video." target="_blank" class="floating-wa" title="WhatsApp Us">💬</a>
 
   <footer>
     <div class="footer-grid">
@@ -1162,11 +1095,9 @@
   </footer>
 
   <script>
-    // Modal Management
+    // 1. Modals Control
     function openContactModal(packageName) {
       document.getElementById('modalPackageField').value = packageName || 'General Project Scope';
-      document.getElementById('modalForm').style.display = 'block';
-      document.getElementById('modalSuccess').style.display = 'none';
       document.getElementById('contactModal').classList.add('active');
       document.body.style.overflow = 'hidden';
     }
@@ -1203,23 +1134,22 @@
       if (event.target === projectM) closeProjectModal();
     };
 
-    // AJAX Silent Form Submission (No Third-Party Redirects)
-    async function handleSilentSubmit(formId, btnId, successBoxId) {
+    // 2. Silent Submit (बटन पर सिर्फ "✓ Sent" दिखेगा, कोई नया पेज नहीं खुलेगा)
+    async function handleSilentSubmit(formId, btnId) {
       const form = document.getElementById(formId);
       const btn = document.getElementById(btnId);
-      const successBox = document.getElementById(successBoxId);
 
       form.addEventListener('submit', async function(e) {
         e.preventDefault();
         
         const originalText = btn.innerHTML;
         btn.disabled = true;
-        btn.innerHTML = '⏳ Submitting Securely...';
+        btn.innerHTML = '⏳ Sending...';
 
         const formData = new FormData(form);
         const objectData = {};
         formData.forEach((value, key) => objectData[key] = value);
-        objectData['_subject'] = '🚀 New DS WebPulse Enterprise Inquiry!';
+        objectData['_subject'] = '🚀 New High-Value Inquiry on DS WebPulse!';
 
         try {
           const res = await fetch('https://formsubmit.co/ajax/dswebpulse@gmail.com', {
@@ -1232,76 +1162,33 @@
           });
 
           if (res.ok) {
-            form.style.display = 'none';
-            successBox.style.display = 'block';
+            btn.innerHTML = '✓ Sent Successfully!';
+            btn.style.background = '#10b981';
             form.reset();
+            
+            setTimeout(() => {
+              btn.disabled = false;
+              btn.innerHTML = originalText;
+              btn.style.background = '';
+              if(formId === 'modalForm') {
+                closeContactModal();
+              }
+            }, 3000);
           } else {
-            alert('Something went wrong. Please reach out directly on WhatsApp.');
+            alert('Something went wrong. Please try again.');
+            btn.disabled = false;
+            btn.innerHTML = originalText;
           }
         } catch (err) {
-          alert('Network issue. Please connect via WhatsApp: +91 8698189788');
-        } finally {
+          alert('Network issue. Please try again.');
           btn.disabled = false;
           btn.innerHTML = originalText;
         }
       });
     }
 
-    handleSilentSubmit('onPageForm', 'onPageSubmitBtn', 'onPageSuccess');
-    handleSilentSubmit('modalForm', 'modalSubmitBtn', 'modalSuccess');
-// बटन पर सिर्फ 'Sent' दिखाने वाला तरीका
-async function handleSilentSubmit(formId, btnId) {
-  const form = document.getElementById(formId);
-  const btn = document.getElementById(btnId);
-
-  form.addEventListener('submit', async function(e) {
-    e.preventDefault();
-    
-    btn.disabled = true;
-    btn.innerHTML = '⏳ Sending...';
-
-    const formData = new FormData(form);
-    const objectData = {};
-    formData.forEach((value, key) => objectData[key] = value);
-    objectData['_subject'] = '🚀 New Client Inquiry on DS WebPulse!';
-
-    try {
-      const res = await fetch('https://formsubmit.co/ajax/dswebpulse@gmail.com', {
-        method: 'POST',
-        headers: { 
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify(objectData)
-      });
-
-      if (res.ok) {
-        // कोई नया पेज नहीं, कोई नया बॉक्स नहीं - सिर्फ बटन पर 'Sent'
-        btn.innerHTML = '✓ Sent Successfully!';
-        btn.style.background = '#10b981'; // हरा रंग
-        form.reset();
-        
-        setTimeout(() => {
-          btn.disabled = false;
-          btn.innerHTML = '📨 Submit Project Details';
-          btn.style.background = '';
-        }, 4000);
-      } else {
-        alert('Could not send. Please try again.');
-        btn.disabled = false;
-        btn.innerHTML = 'Try Again';
-      }
-    } catch (err) {
-      alert('Network issue.');
-      btn.disabled = false;
-      btn.innerHTML = 'Try Again';
-    }
-  });
-}
-
-handleSilentSubmit('onPageForm', 'onPageSubmitBtn');
-handleSilentSubmit('modalForm', 'modalSubmitBtn');
-    /script>
-      
+    handleSilentSubmit('onPageForm', 'onPageSubmitBtn');
+    handleSilentSubmit('modalForm', 'modalSubmitBtn');
+  </script>
 </body>
 </html>
